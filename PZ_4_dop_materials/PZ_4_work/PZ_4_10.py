@@ -1,20 +1,19 @@
-try:
-    number = int(input('Введите число: '))
-    if number >= 3:
-        n_1 = 0
-        n_2 = 1
-        n_4 = 0
-        n_5 = 0
-        while n_4 <= number:
-            n_3 = n_1 + n_2
-            n_1 = n_2
-            n_2 = n_3
-            if n_3 % 2 == 0:
-                print('Чётное число:', n_3)
-                n_5 += 1
-            n_4 += 1
-        print('Количество чётных чисел: ', n_5)
-    else:
-        print('Error')
-except Exception:
-    print('Error')
+number = int(input('Введите число: '))
+number_x = 0
+number_y = 1
+i = 0
+list_2 = []
+id = 0
+if number >= 3:
+    while i < number:
+        print(f'Числа Фибоначчи: {number_x}, {number_y}')
+        number_x += number_y
+        if number_x % 2 == 0:
+            id += 1
+        if number_y % 2 == 0:
+            id += 1
+        number_y += number_x
+        i += 1
+    print(f"Количество чётных чисел: {id}")
+
+
